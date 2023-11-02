@@ -1,0 +1,4 @@
+# ignroe node module
+node_modules
+# ignore papackage-lock.json
+package-lock.json
