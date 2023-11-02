@@ -1,4 +1,4 @@
-# ignroe node module
+# Ignore node_modules
 node_modules
-# ignore papackage-lock.json
+# ignore package-lock.json
 package-lock.json
