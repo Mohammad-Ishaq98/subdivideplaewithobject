@@ -13,6 +13,17 @@ const orbit = new OrbitControls( camera, renderer.domElement );
 orbit.update(); 
 
 // plane mesh
+
+const planeMeshs = new THREE.Mesh( 
+	new THREE.PlaneGeometry( 20, 20 ),
+	new THREE.MeshBasicMaterial( {
+		side : THREE.DoubleSide,
+		visible : true
+	} )
+ );
+planeMeshs.rotateX( -Math.PI / 2 );
+scene.add( planeMeshs );
+
 const planeMehs = new THREE.Mesh(
 	new THREE.PlaneGeometry( 20, 20 ),
 	new THREE.MeshBasicMaterial({
@@ -26,6 +37,16 @@ planeMehs.name = 'ground';
 
 
 //high light
+
+const highlightSqure = new THREE.Mesh( 
+	new THREE.PlaneGeometry( 1, 1 ),
+	new THREE.MeshBasicMaterial( {
+		side : THREE.DoubleSide
+	} )
+ );
+ highlightSqure.rotateX( -Math.PI / 2 );
+ highlightSqure.position.set( 0, 0, 0 );
+ scene.add( highlightSqure );
 
 const highlightSqureMesh = new THREE.Mesh( 
 	new THREE.PlaneGeometry( 1, 1 ),
